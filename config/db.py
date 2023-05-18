@@ -14,7 +14,7 @@ host = os.getenv("HOST_DB")
 port = os.getenv("PORT_DB")
 name_db = os.getenv("NAME_DB")
 
-engine = create_engine(f'mysql+pymysql://{user}:{password}@{host}:{port}/{name_db}', pool_recycle=3600)
+engine = create_engine(f'mysql+pymysql://root@{host}:{port}/{name_db}', pool_recycle=3600)
 
 meta = MetaData()
 if not sqlalchemy.inspect(engine).has_table("cpu"):
