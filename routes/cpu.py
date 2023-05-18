@@ -7,7 +7,7 @@ cpu_router = APIRouter()
 
 @cpu_router.get('/')
 async def index():
-    return {"message":"Pet Microservice"}
+    return {"message":"PC Componentes Microservice"}
 
 @cpu_router.get('/get_all')
 async def get_all_pets():
